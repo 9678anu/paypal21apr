@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayPal Bitcoin Purchase Mailer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Avenir', 'Helvetica', sans-serif;
+      background: #f0f5ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .mailer {
+      max-width: 600px;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #003087, #009CDE);
+      padding: 30px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .header h1 {
+      font-size: 2em;
+      margin-bottom: 8px;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .header p {
+      font-size: 1em;
+      color: #FFC107;
+      font-weight: bold;
+    }
+
+    .content {
+      padding: 20px;
+      color: #333;
+    }
+
+    .content h2 {
+      color: #003087;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .content p {
+      font-size: 1em;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .table-container {
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fafafa;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #e6f0fa;
+    }
+
+    th {
+      background: #009CDE;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    td {
+      color: #333;
+    }
+
+    .product-img {
+      width: 60px;
+      height: auto;
+      border-radius: 5px;
+      vertical-align: middle;
+    }
+
+    .subtotal, .total {
+      font-weight: bold;
+      background: #e6f0fa;
+    }
+
+    .total {
+      color: #003087;
+      font-size: 1.1em;
+    }
+
+    tr:hover {
+      background: #f0f5ff;
+      transition: background 0.2s;
+    }
+    .cta-button {
+      display: block;
+      width: fit-content;
+      margin: 15px auto;
+      padding: 10px 20px;
+      background: #FFC107;
+      color: #003087;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 20px;
+      text-align: center;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #ffdb58;
+      transform: translateY(-2px);
+    }
+
+    .support {
+      text-align: center;
+      font-size: 0.9em;
+      margin-top: 15px;
+      color: #333;
+    }
+
+    .support a {
+      color: #009CDE;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .support a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      background: #003087;
+      padding: 15px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .footer img {
+      width: 80px;
+      height: auto;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .mailer {
+        width: 100%;
+      }
+
+      .header h1 {
+        font-size: 1.6em;
+      }
+
+      .header p {
+        font-size: 0.9em;
+      }
+
+      .content h2 {
+        font-size: 1.3em;
+      }
+
+      th, td {
+        font-size: 0.85em;
+        padding: 8px;
+      }
+
+      .product-img {
+        width: 50px;
+      }
+
+      .faq h3 {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="mailer">
+    <!-- Header -->
+    <div class="header">
+      <h1>Your Bitcoin Purchase is Confirmed!</h1>
+      <p>Secured by PayPal’s Trusted Platform</p>
+    </div>
+    <!-- Content -->
+    <div class="content">
+      <h2>Welcome to Your Crypto Journey</h2>
+      <p>Thank you for choosing PayPal for your Bitcoin purchase! Your transaction of $499 for 0.007 BTC was seamlessly processed with our state-of-the-art security, ensuring your investment is safe. Whether you’re a seasoned crypto trader or a first-time buyer, PayPal simplifies your entry into the world of digital currency.</p>
+      <h2>Your Transaction Details</h2>
+      <!-- Table -->
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Description</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="https://academy.cryptowebacademy.com/wp-content/uploads/2023/12/bitcoin_logo-1-768x768-1.png" alt="Bitcoin Icon" class="product-img"></td>
+              <td>Bitcoin (BTC) Purchase - 0.007 BTC</td>
+              <td>$499.00</td>
+            </tr>
+            <tr class="subtotal">
+              <td colspan="2">Subtotal</td>
+              <td>$499.00</td>
+            </tr>
+            <tr class="total">
+              <td colspan="2">Total (Paid via PayPal)</td>
+              <td>$499.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+<p>Have questions or need assistance? Our dedicated crypto support team is available around the clock to help you navigate your Bitcoin journey.</p>
+      <a href="tel:+18555744604" class="cta-button">Call Now</a>
+      <p class="support">For immediate assistance, contact us at <a href="tel:+18555744604">+1-(855)-574-4604</a></p>
+   </div>
+      <!-- Footer -->
+    <div class="footer">
+      <p>PayPal - Your Gateway to Crypto Success</p>
+      <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="PayPal Logo">
+    </div>
+</body>
+</html>
